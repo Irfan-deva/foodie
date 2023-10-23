@@ -105,4 +105,4 @@ export const food = [
 
   },
 ]
-export const tabs = ['Fast food', 'Drinks', 'Kashmiri', 'Juice', 'Cheese', 'Chicken', 'Non-Veg']
+export const tabs = ['Beef', 'Fast food', 'Drinks', 'Cheese', 'Chicken', 'Non-Veg']
