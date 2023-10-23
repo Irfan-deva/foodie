@@ -14,7 +14,9 @@ const FULL_SIZE = CARD_WIDTH + SPACING * 2
 const FoodScreen = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0])
   return (
-    <ScrollView>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+    >
 
       <FlatList
         horizontal
@@ -62,11 +64,10 @@ const FoodScreen = () => {
           )
         }}
       />
-      <FlatList
-        data={food}
-        keyExtractor={({ item }) => item}
-        renderItem={({ item }) => {
-          return <TouchableOpacity
+
+      {
+        food.map(item => {
+          return <TouchableOpacity key={item.id}
             style={{ margin: SPACING, flexDirection: 'row' }} >
             <View
               style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
@@ -85,8 +86,9 @@ const FoodScreen = () => {
               <Text style={{ color: '#000', fontSize: 16, fontWeight: '800' }}>{item.price}</Text>
             </View>
           </TouchableOpacity>
-        }}
-      />
+        })
+      }
+
     </ScrollView>
   )
 }
