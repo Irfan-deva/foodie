@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, FlatList, TextInput, Text } from 'react-native';
 
 const MyComponent = () => {
-  const data = ['Irfan', 'Isra', 'Rubina', 'Farooq', 'Gulshan', 'Umer', 'Nadeem', 'Insha',];
   const fruits = [
     { name: 'apple', color: 'red' },
     { name: 'orange', color: 'orange' },
